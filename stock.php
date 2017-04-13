@@ -29,7 +29,7 @@ while ($donnees = mysqli_fetch_array($res)){
 }
  ?>
 </select>
- <input type="submit" value="ok">
+ <input type="submit" value="Voir stock">
 </form>
 </body>
 </html>
