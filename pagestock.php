@@ -21,16 +21,16 @@
 				<td>Total</td>
 			</tr>
 
-	
+
 
 <?php
-	$con = mysqli_connect("localhost","root","","dentegostock");	
+	$con = mysqli_connect("localhost","root","","dentegostock");
 	if (mysqli_connect_errno())
   	{
   		echo "Failed to connect to MySQL: " . mysqli_connect_error();
   	}
-
-  	$sql = "SELECT id, NomObjet, Quantite, PrixUnitaire FROM stock";
+		$libelle = $_POST['site'];
+  	$sql = "SELECT stock.id, NomObjet, Quantite, PrixUnitaire FROM stock INNER JOIN site WHERE stock.id_site=site.id AND Libelle='$libelle'";
 	$result = $con->query($sql);
 
 	if ($result->num_rows > 0) {
