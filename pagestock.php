@@ -29,9 +29,9 @@
   	{
   		echo "Failed to connect to MySQL: " . mysqli_connect_error();
   	}
-		$libelle = $_POST['site'];
-  	$sql = "SELECT stock.id, NomObjet, Quantite, PrixUnitaire FROM stock INNER JOIN site WHERE stock.id_site=site.id AND Libelle='$libelle'";
-	$result = $con->query($sql);
+		$id = $_POST['site'];
+  	$sql = "SELECT stock.id, NomObjet, Quantite, PrixUnitaire FROM stock INNER JOIN site WHERE stock.id_site=site.id AND id_site='$id'";
+	  $result = $con->query($sql);
 
 	if ($result->num_rows > 0) {
 	    // output data of each row

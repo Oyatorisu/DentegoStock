@@ -24,12 +24,12 @@ $res = $conn->query($req);
 <?php
 while ($donnees = mysqli_fetch_array($res)){
   ?>
-  <option value=<?php echo $donnees['Libelle']; ?>><?php echo $donnees['Libelle']; ?></option>;
+  <option value=<?php echo $donnees['id']; ?>><?php echo $donnees['Libelle']; ?></option>;
   <?php
 }
  ?>
 </select>
- <input type="submit" value="Voir stock">
+ <input type="submit" value="Voir stock" />
 </form>
 </body>
 </html>
