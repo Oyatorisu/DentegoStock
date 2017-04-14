@@ -30,6 +30,7 @@
   		echo "Failed to connect to MySQL: " . mysqli_connect_error();
   	}
 		$id = $_POST['site'];
+		echo $id;
   	$sql = "SELECT stock.id, NomObjet, Quantite, PrixUnitaire FROM stock INNER JOIN site WHERE stock.id_site=site.id AND id_site='$id'";
 	  $result = $con->query($sql);
 
