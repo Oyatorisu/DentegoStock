@@ -1,0 +1,32 @@
+INSERT INTO `site`(`id`, `Libelle`, `Adresse`, `CodePostal`, `Ville`, `Telephone`, `Fax`) VALUES
+(1,"Champerret","60 rue Laugier","75017","Paris","0142679106",""),
+(2,"Marcel Sembat","108 avenue Edouard Vaillant","92100","Boulogne-Billancourt","0141101105",""),
+(3,"Cannes","6 place de la Gare","06400","0493303030","",""),
+(4,"Chalons sur Saone","","","","",""),
+(5,"Hotel de Ville","23 rue du Renard","75004","Paris","0158393131",""),
+(6,"Nice","18 avenue Thiers","06000","Nice","0492000808",""),
+(7,"Porte d'Orléans","111 avenue du Général Leclerc","75014","Paris","0140434100",""),
+(8,"Voltaire","115 boulevard Voltaire","75011","Paris","0140095880",""),
+(9,"Keter","10 rue Valenciennes","75010","Paris","0185730303","");
+
+INSERT INTO `categorie`(`nom`) VALUES
+("Anesthesie"),
+("Chaine de stérélisation"),
+("Chirurgie"),
+("Ciments et fonds de cavité"),
+("Cires"),
+("Empreintes"),
+("Endodontie"),
+("Equipement"),
+("Fraises,polissage et grattage"),
+("Hygiène"),
+("Instruments"),
+("Orthodontie"),
+("Preparation de modeles"),
+("Prevention, motivation, prophy"),
+("protection personne/équipement"),
+("Prothèses"),
+("Radiographie"),
+("Restauration"),
+("Tenons"),
+("Usage Unique");
