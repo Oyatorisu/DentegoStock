@@ -51,15 +51,25 @@ while ($donnees = mysqli_fetch_array($res)){
       <td>Quantité</td>
       <td>Prix Unitaire</td>
       <td>Total</td>
+      <td>Catégorie</td>
+      <td>Fournisseur</td>
+      
     </tr>
     <?php
-    $sql = "SELECT stock.id, NomObjet, Quantite, PrixUnitaire FROM stock INNER JOIN site WHERE stock.id_site=site.id AND id_site='$var'";
+    $sql = "SELECT stock.id, NomObjet, Quantite, PrixUnitaire, fournisseur.nom as nomf, categorie.nom as nomc FROM stock, site, categorie, fournisseur WHERE stock.id_site=site.id AND id_four = fournisseur.id AND id_cat = categorie.id AND id_site='$var'";
 	  $result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
 	    // output data of each row
 	    while($row = $result->fetch_assoc()) {
-	        echo "<tr><td>" . $row["id"]. "</td><td>" . $row["NomObjet"]. "</td><td>" . $row["Quantite"]. " </td><td>" . $row["PrixUnitaire"]."</td><td>". $row["Quantite"] * $row["PrixUnitaire"] ."</td></tr>";
+	        echo "<tr><td>";
+          echo $row["id"]. "</td><td>";
+          echo $row["NomObjet"]. "</td><td>";
+          echo $row["Quantite"]. " </td><td>";
+          echo $row["PrixUnitaire"]. "</td><td>";
+          echo $row["Quantite"] * $row["PrixUnitaire"] ."</td><td>";
+          echo $row["nomc"] ."</td><td>";
+          echo $row["nomf"] ."</td></tr>";
 	    }
 	} else {
 	    echo "0 results";
