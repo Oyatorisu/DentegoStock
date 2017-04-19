@@ -27,6 +27,7 @@
           <?php
         }
          ?>
+         <input type="button" value="ajouter" /> 
 
       </body>
       </html>
