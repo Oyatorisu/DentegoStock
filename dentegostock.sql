@@ -20,7 +20,7 @@ CREATE TABLE `historique`
   `id` int(11) NOT NULL,
   `Entree` tinyint(1) NOT NULL,
   `Sortie` tinyint(1) NOT NULL,
-  `id_stock` int(11) NOT NULL,
+  `id_stock` varchar(11) NOT NULL,
   `Quantite_initiale` int(11) NOT NULL,
   `Quantite_modif` int(11) NOT NULL,
   `DateModif` date NOT NULL,
@@ -47,8 +47,8 @@ CREATE TABLE `fournisseur`
 
 CREATE TABLE `stock` 
 (
-  `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT
-  `NomObjet` varchar(50) NOT NULL,
+  `id` varchar(11) PRIMARY KEY NOT NULL AUTO_INCREMENT
+  `NomObjet` varchar(150) NOT NULL,
   `Quantite` int(11) NOT NULL,
   `PrixUnitaire` float(11) NOT NULL,
   `id_site` int(11) NOT NULL,
