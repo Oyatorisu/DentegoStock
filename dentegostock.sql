@@ -1,6 +1,6 @@
 CREATE DATABASE dentegostock;
 
-USE dentegostock;
+USE  dentegostock;
 
 CREATE TABLE site
 (
@@ -51,8 +51,7 @@ CREATE TABLE `stock`
 CREATE TABLE `historique` 
 (
   `id` int(11) NOT NULL,
-  `Entree` tinyint(1) NOT NULL,
-  `Sortie` tinyint(1) NOT NULL,
+  `EntreeSortie` tinyint(1) NOT NULL,
   `id_stock` int(11) NOT NULL,
   `Quantite_initiale` int(11) NOT NULL,
   `Quantite_modif` int(11) NOT NULL,

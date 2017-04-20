@@ -9,27 +9,7 @@ INSERT INTO `site`(`id`, `Libelle`, `Adresse`, `CodePostal`, `Ville`, `Telephone
 (8,"Voltaire","115 boulevard Voltaire","75011","Paris","0140095880",""),
 (9,"Keter","10 rue Valenciennes","75010","Paris","0185730303","");
 
-INSERT INTO `categorie`(`nom`) VALUES
-("Anesthesie"),
-("Chaine de stérélisation"),
-("Chirurgie"),
-("Ciments et fonds de cavité"),
-("Cires"),
-("Empreintes"),
-("Endodontie"),
-("Equipement"),
-("Fraises,polissage et grattage"),
-("Hygiène"),
-("Instruments"),
-("Orthodontie"),
-("Preparation de modeles"),
-("Prevention, motivation, prophy"),
-("protection personne/équipement"),
-("Prothèses"),
-("Radiographie"),
-("Restauration"),
-("Tenons"),
-("Usage Unique");
+
 
 INSERT INTO `fournisseur` (`id`, `nom`, `adresse`, `ville`, `codepostal`, `telephone`) VALUES
 (1, '3M ESPE', NULL, NULL, NULL, NULL),
@@ -142,3 +122,30 @@ INSERT INTO `fournisseur` (`id`, `nom`, `adresse`, `ville`, `codepostal`, `telep
 (108, 'Papernet', NULL, NULL, NULL, NULL);
 
 
+
+
+
+
+
+INSERT INTO `categorie`(`nom`) VALUES
+("Anesthesie"),
+("Chaine de stérélisation"),
+("Chirurgie"),
+("Ciments et fonds de cavité"),
+("Cires"),
+("Empreintes"),
+("Endodontie"),
+("Equipement"),
+("Fraises,polissage et grattage"),
+("Hygiène"),
+("Instruments"),
+("Orthodontie"),
+("Preparation de modeles"),
+("Prevention, motivation, prophy"),
+("protection personne/équipement"),
+("Prothèses"),
+("Radiographie"),
+("Restauration"),
+("Tenons"),
+("Usage Unique"),
+("Photographie)");
