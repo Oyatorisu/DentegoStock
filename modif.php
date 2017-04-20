@@ -7,6 +7,8 @@
     </head>
 
       <body>
+      <div id="">
+      <input type="button"
         <?php
         $con = mysqli_connect("localhost","root","","dentegostock");
       	if (mysqli_connect_errno())
