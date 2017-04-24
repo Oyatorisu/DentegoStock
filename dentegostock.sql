@@ -36,13 +36,13 @@ CREATE TABLE `fournisseur`
 CREATE TABLE `stock` 
 (
   `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `NomObjet` varchar(250) NOT NULL,
-  `Quantite` int(11) NOT NULL,
-  `PrixUnitaire` float NOT NULL,
-  `id_site` int(11) NOT NULL,
-  `id_cat` int(11) NOT NULL,
-  `id_four` int(11) NOT NULL,
-  `codearticle` int(11) NOT NULL,
+  `NomObjet` varchar(250),
+  `Quantite` int(11),
+  `PrixUnitaire` float,
+  `id_site` int(11),
+  `id_cat` int(11),
+  `id_four` int(11),
+  `codearticle` int(11),
   CONSTRAINT FK_idsite FOREIGN KEY (id_site) REFERENCES site(id),
   CONSTRAINT FK_idcat FOREIGN KEY (id_cat) REFERENCES categorie(id),
   CONSTRAINT FK_idfour FOREIGN KEY (id_four) REFERENCES fournisseur(id)
@@ -50,11 +50,11 @@ CREATE TABLE `stock`
 
 CREATE TABLE `historique` 
 (
-  `id` int(11) NOT NULL,
-  `EntreeSortie` tinyint(1) NOT NULL,
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT.
+  `EntreeSortie` tinyint(1),
   `id_stock` int(11) NOT NULL,
-  `Quantite_initiale` int(11) NOT NULL,
-  `Quantite_modif` int(11) NOT NULL,
-  `DateModif` date NOT NULL,
+  `Quantite_initiale` int(11),
+  `Quantite_modif` int(11),
+  `DateModif` date,
   CONSTRAINT FK_idstock FOREIGN KEY (id_stock) REFERENCES stock(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
