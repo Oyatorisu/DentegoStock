@@ -92,6 +92,7 @@ CREATE TABLE Encaissement(
         DateEncaissement Date ,
         DateDepot        Date ,
         Id_Facture       Int ,
+        Id_Reglement	 Int,
         PRIMARY KEY (Id )
 )ENGINE=InnoDB;
 
@@ -119,7 +120,6 @@ CREATE TABLE Tiers_Payeur(
 CREATE TABLE FSE(
         Id         Int NOT NULL ,
         DateFSE    Date ,
-        Id_Facture Int ,
         PRIMARY KEY (Id )
 )ENGINE=InnoDB;
 
@@ -202,6 +202,8 @@ CREATE TABLE RDV(
         Duree        Int ,
         Id_Praticien Int ,
         Id_Personne  Int ,
+        Id_Site 	 Int ,
+        Id_TypeSoin	 Int , 
         PRIMARY KEY (Id )
 )ENGINE=InnoDB;
 
